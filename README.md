@@ -62,7 +62,7 @@ SenderSmtp       | This is the domain or IP address the script will use as SMTP 
 SendErrorMail    | Enable/Disable the sending of errors messages.                                 | = $True
 ErrorEmailList   | E-mail List                                                                    | = @('home@mydomain.com', '1234567890@phoneprovider.com')
  
-###_About EmailList_
+### _About EmailList_
 
 1 entry example:
 > @('email@domain.com')
@@ -72,7 +72,7 @@ Multi-entries example:
 
 You can use the same address for sender and recipient if you want.
 
-###_About "email2sms"_
+### _About "email2sms"_
 Most phone provider have email2sms functionnality. Just check with your provider, you probably already have an addres looking like:
 > 9995551212@YourPhoneProvider.com
 
