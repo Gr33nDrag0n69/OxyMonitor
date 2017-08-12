@@ -17,13 +17,13 @@ If you like it, please vote for me on Oxy MainNet for Delegate or I accept donat
 
 Delegate: gr33ndrag0n / Address: MainNet 12098252122551211685X
 
-##**Installation**
+## **Installation**
 
 Save a copy of OxyMonitor.ps1
 
 This README use this path C:\Scripts\OxyMonitor.ps1, adjust accordingly if you use something else.
 
-##**Configuration, Manual Usage & Testing**
+## **Configuration, Manual Usage & Testing**
 
 Open the script in your favorite text editor. Basic Notepad WILL work but not recommended. I recommend notepad++ available for free [HERE](https://notepad-plus-plus.org/).
 
@@ -39,7 +39,7 @@ The configuration is splitted in sub-sections:
  - Account
  - Nodes
 
-###**Configuring Monitoring Section**
+### **Configuring Monitoring Section**
 
 This script can test 4 things:
 
@@ -51,7 +51,7 @@ This script can test 4 things:
 This section allow disabling a specific test.
 
 
-###**Configuring E-mail Section**
+### **Configuring E-mail Section**
 
 In this section we will configure the address used to send and received the monitoring automatic e-mails.
 
@@ -79,17 +79,17 @@ Most phone provider have email2sms functionnality. Just check with your provider
 It allow text e-mail sent to this address to be redirected as sms to your phone.
 
  
-###**Configuring Account Section**
+### **Configuring Account Section**
 
 Add your Delegate Name and Address. There is a function later to get the public key. See included example.
 
 
-###**Configuring Nodes Section**
+### **Configuring Nodes Section**
 
 Add the name and http address of all your nodes. See included examples.
 
 
-####Retreive Public Key
+#### Retreive Public Key
 
 `.\OxyMonitor.ps1 -ShowPublicKey`
 OR
@@ -99,7 +99,7 @@ OR
 
 Edit the script again to add the public key in the Delegate configuration.
 
-####Test E-mail Configuration
+#### Test E-mail Configuration
 
 `.\OxyMonitor.ps1 -SendTestEmail`
 
@@ -113,7 +113,7 @@ OR
 
 ![##Images_README_Header##](./PNG/ShowMessage.png)
 
-##**Scheduled Task(s) Creation & Testing**
+## **Scheduled Task(s) Creation & Testing**
 
 The script do a check and send e-mail if necessary.
 
@@ -142,7 +142,7 @@ Action  -> New (TestNet)
 			* Arguments:        . "C:\Scripts\OxyMonitor.ps1 -TestNet"
 			* WorkingDirectory: C:\Scripts\
 
-##**Troubleshooting & Common Error(s)**
+## **Troubleshooting & Common Error(s)**
 
 **It doesn’t work.**
 
