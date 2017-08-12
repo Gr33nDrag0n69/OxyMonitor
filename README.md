@@ -39,7 +39,7 @@ The configuration is splitted in sub-sections:
  - Account
  - Nodes
 
-### **Configuring Monitoring Section**
+###**Configuring Monitoring Section**
 
 This script can test 4 things:
 
@@ -51,7 +51,7 @@ This script can test 4 things:
 This section allow disabling a specific test.
 
 
-### **Configuring E-mail Section**
+###**Configuring E-mail Section**
 
 In this section we will configure the address used to send and received the monitoring automatic e-mails.
 
@@ -89,15 +89,17 @@ Add your Delegate Name and Address. There is a function later to get the public 
 Add the name and http address of all your nodes. See included examples.
 
 
-#### Retreive Public Key
+####Retreive Public Key
 
 `.\OxyMonitor.ps1 -ShowPublicKey`
+OR
+`.\OxyMonitor.ps1 -ShowPublicKey -TestNet`
 
 ![##Images_README_Header##](./PNG/ShowPublicKey.png)
 
 Edit the script again to add the public key in the Delegate configuration.
 
-#### Test E-mail Configuration
+####Test E-mail Configuration
 
 `.\OxyMonitor.ps1 -SendTestEmail`
 
@@ -105,7 +107,9 @@ Edit the script again to add the public key in the Delegate configuration.
 
 #### Run manually the check
 
-`.\OxyMonitor.ps1 -ShowMessage`
+`.\OxyMonitor.ps1 -ShowMessage -AsciiBanner`
+OR
+`.\OxyMonitor.ps1 -ShowMessage -AsciiBanner -TestNet`
 
 ![##Images_README_Header##](./PNG/ShowMessage.png)
 
@@ -126,10 +130,16 @@ Trigger -> New
 			* One time
 			* Repeat each "5 minutes" for a duration of "infinity"
 			
-Action  -> New
+Action  -> New (MainNet)
 
 			* Command:          C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-			* Arguments:        C:\Scripts\OxyMonitor.ps1
+			* Arguments:        . "C:\Scripts\OxyMonitor.ps1"
+			* WorkingDirectory: C:\Scripts\
+
+Action  -> New (TestNet)
+
+			* Command:          C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+			* Arguments:        . "C:\Scripts\OxyMonitor.ps1 -TestNet"
 			* WorkingDirectory: C:\Scripts\
 
 ##**Troubleshooting & Common Error(s)**
